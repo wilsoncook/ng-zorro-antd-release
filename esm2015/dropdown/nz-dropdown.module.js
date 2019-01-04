@@ -1,0 +1,26 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+import { OverlayModule } from '@angular/cdk/overlay';
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { NzButtonModule } from '../button/nz-button.module';
+import { NzMenuModule } from '../menu/nz-menu.module';
+import { NzDropDownButtonComponent } from './nz-dropdown-button.component';
+import { NzDropdownContextComponent } from './nz-dropdown-context.component';
+import { NzDropDownComponent } from './nz-dropdown.component';
+import { NzDropDownDirective } from './nz-dropdown.directive';
+export class NzDropDownModule {
+}
+NzDropDownModule.decorators = [
+    { type: NgModule, args: [{
+                imports: [CommonModule, OverlayModule, FormsModule, NzButtonModule, NzMenuModule],
+                declarations: [NzDropDownComponent, NzDropDownButtonComponent, NzDropDownDirective, NzDropdownContextComponent],
+                entryComponents: [NzDropdownContextComponent],
+                exports: [NzDropDownComponent, NzDropDownButtonComponent, NzDropDownDirective]
+            },] }
+];
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibnotZHJvcGRvd24ubW9kdWxlLmpzIiwic291cmNlUm9vdCI6Im5nOi8vbmctem9ycm8tYW50ZC8iLCJzb3VyY2VzIjpbImRyb3Bkb3duL256LWRyb3Bkb3duLm1vZHVsZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBQUEsT0FBTyxFQUFFLGFBQWEsRUFBRSxNQUFNLHNCQUFzQixDQUFDO0FBQ3JELE9BQU8sRUFBRSxZQUFZLEVBQUUsTUFBTSxpQkFBaUIsQ0FBQztBQUMvQyxPQUFPLEVBQUUsUUFBUSxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBQ3pDLE9BQU8sRUFBRSxXQUFXLEVBQUUsTUFBTSxnQkFBZ0IsQ0FBQztBQUU3QyxPQUFPLEVBQUUsY0FBYyxFQUFFLE1BQU0sNEJBQTRCLENBQUM7QUFDNUQsT0FBTyxFQUFFLFlBQVksRUFBRSxNQUFNLHdCQUF3QixDQUFDO0FBRXRELE9BQU8sRUFBRSx5QkFBeUIsRUFBRSxNQUFNLGdDQUFnQyxDQUFDO0FBQzNFLE9BQU8sRUFBRSwwQkFBMEIsRUFBRSxNQUFNLGlDQUFpQyxDQUFDO0FBQzdFLE9BQU8sRUFBRSxtQkFBbUIsRUFBRSxNQUFNLHlCQUF5QixDQUFDO0FBQzlELE9BQU8sRUFBRSxtQkFBbUIsRUFBRSxNQUFNLHlCQUF5QixDQUFDO0FBUTlELE1BQU07OztZQU5MLFFBQVEsU0FBQztnQkFDUixPQUFPLEVBQVUsQ0FBRSxZQUFZLEVBQUUsYUFBYSxFQUFFLFdBQVcsRUFBRSxjQUFjLEVBQUUsWUFBWSxDQUFFO2dCQUMzRixZQUFZLEVBQUssQ0FBRSxtQkFBbUIsRUFBRSx5QkFBeUIsRUFBRSxtQkFBbUIsRUFBRSwwQkFBMEIsQ0FBRTtnQkFDcEgsZUFBZSxFQUFFLENBQUUsMEJBQTBCLENBQUU7Z0JBQy9DLE9BQU8sRUFBVSxDQUFFLG1CQUFtQixFQUFFLHlCQUF5QixFQUFFLG1CQUFtQixDQUFFO2FBQ3pGIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgT3ZlcmxheU1vZHVsZSB9IGZyb20gJ0Bhbmd1bGFyL2Nkay9vdmVybGF5JztcbmltcG9ydCB7IENvbW1vbk1vZHVsZSB9IGZyb20gJ0Bhbmd1bGFyL2NvbW1vbic7XG5pbXBvcnQgeyBOZ01vZHVsZSB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuaW1wb3J0IHsgRm9ybXNNb2R1bGUgfSBmcm9tICdAYW5ndWxhci9mb3Jtcyc7XG5cbmltcG9ydCB7IE56QnV0dG9uTW9kdWxlIH0gZnJvbSAnLi4vYnV0dG9uL256LWJ1dHRvbi5tb2R1bGUnO1xuaW1wb3J0IHsgTnpNZW51TW9kdWxlIH0gZnJvbSAnLi4vbWVudS9uei1tZW51Lm1vZHVsZSc7XG5cbmltcG9ydCB7IE56RHJvcERvd25CdXR0b25Db21wb25lbnQgfSBmcm9tICcuL256LWRyb3Bkb3duLWJ1dHRvbi5jb21wb25lbnQnO1xuaW1wb3J0IHsgTnpEcm9wZG93bkNvbnRleHRDb21wb25lbnQgfSBmcm9tICcuL256LWRyb3Bkb3duLWNvbnRleHQuY29tcG9uZW50JztcbmltcG9ydCB7IE56RHJvcERvd25Db21wb25lbnQgfSBmcm9tICcuL256LWRyb3Bkb3duLmNvbXBvbmVudCc7XG5pbXBvcnQgeyBOekRyb3BEb3duRGlyZWN0aXZlIH0gZnJvbSAnLi9uei1kcm9wZG93bi5kaXJlY3RpdmUnO1xuXG5ATmdNb2R1bGUoe1xuICBpbXBvcnRzICAgICAgICA6IFsgQ29tbW9uTW9kdWxlLCBPdmVybGF5TW9kdWxlLCBGb3Jtc01vZHVsZSwgTnpCdXR0b25Nb2R1bGUsIE56TWVudU1vZHVsZSBdLFxuICBkZWNsYXJhdGlvbnMgICA6IFsgTnpEcm9wRG93bkNvbXBvbmVudCwgTnpEcm9wRG93bkJ1dHRvbkNvbXBvbmVudCwgTnpEcm9wRG93bkRpcmVjdGl2ZSwgTnpEcm9wZG93bkNvbnRleHRDb21wb25lbnQgXSxcbiAgZW50cnlDb21wb25lbnRzOiBbIE56RHJvcGRvd25Db250ZXh0Q29tcG9uZW50IF0sXG4gIGV4cG9ydHMgICAgICAgIDogWyBOekRyb3BEb3duQ29tcG9uZW50LCBOekRyb3BEb3duQnV0dG9uQ29tcG9uZW50LCBOekRyb3BEb3duRGlyZWN0aXZlIF1cbn0pXG5leHBvcnQgY2xhc3MgTnpEcm9wRG93bk1vZHVsZSB7XG59XG4iXX0=
