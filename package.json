@@ -22,7 +22,6 @@
   },
   "dependencies": {
     "date-fns": "^1.29.0",
-    "@angular/cdk": "^7.0.0",
     "tslib": "^1.9.0"
   },
   "peerDependencies": {
