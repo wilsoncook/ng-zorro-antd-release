@@ -89,3 +89,4 @@ export interface NzI18nInterface {
         previewFile: string;
     };
 }
+export declare type DateLocale = any;

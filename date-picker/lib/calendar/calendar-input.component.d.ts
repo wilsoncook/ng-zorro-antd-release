@@ -1,9 +1,9 @@
 import { EventEmitter, OnInit } from '@angular/core';
+import { DateHelperService } from '../../../i18n/date-helper.service';
 import { NzCalendarI18nInterface } from '../../../i18n/nz-i18n.interface';
-import { NzI18nService } from '../../../i18n/nz-i18n.service';
 import { CandyDate } from '../candy-date';
 export declare class CalendarInputComponent implements OnInit {
-    private i18n;
+    private dateHelper;
     locale: NzCalendarI18nInterface;
     format: string;
     placeholder: string;
@@ -12,7 +12,7 @@ export declare class CalendarInputComponent implements OnInit {
     valueChange: EventEmitter<CandyDate>;
     prefixCls: string;
     invalidInputClass: string;
-    constructor(i18n: NzI18nService);
+    constructor(dateHelper: DateHelperService);
     ngOnInit(): void;
     onInputKeyup(event: Event): void;
     toReadableInput(value: CandyDate): string;

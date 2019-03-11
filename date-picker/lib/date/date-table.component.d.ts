@@ -1,10 +1,14 @@
 import { EventEmitter, OnChanges, OnInit, SimpleChanges, TemplateRef } from '@angular/core';
 import { FunctionProp } from '../../../core/types/common-wrap';
 import { isNonEmptyString, isTemplateRef } from '../../../core/util/check';
+import { DateHelperService } from '../../../i18n/date-helper.service';
+import { NzCalendarI18nInterface } from '../../../i18n/nz-i18n.interface';
 import { NzI18nService } from '../../../i18n/nz-i18n.service';
 import { CandyDate } from '../candy-date';
 export declare class DateTableComponent implements OnInit, OnChanges {
     private i18n;
+    private dateHelper;
+    locale: NzCalendarI18nInterface;
     selectedValue: CandyDate[];
     hoverValue: CandyDate[];
     value: CandyDate;
@@ -18,7 +22,7 @@ export declare class DateTableComponent implements OnInit, OnChanges {
     weekRows: WeekRow[];
     isTemplateRef: typeof isTemplateRef;
     isNonEmptyString: typeof isNonEmptyString;
-    constructor(i18n: NzI18nService);
+    constructor(i18n: NzI18nService, dateHelper: DateHelperService);
     ngOnInit(): void;
     ngOnChanges(changes: SimpleChanges): void;
     private isDateRealChange;
@@ -28,7 +32,6 @@ export declare class DateTableComponent implements OnInit, OnChanges {
     private makeHeadWeekDays;
     private getVeryShortWeekFormat;
     private makeWeekRows;
-    private getFirstDayOfWeek;
     private getDateTitle;
     private getWeekNum;
     private isBeforeMonthYear;

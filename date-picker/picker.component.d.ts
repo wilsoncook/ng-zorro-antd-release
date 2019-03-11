@@ -1,9 +1,9 @@
 import { CdkConnectedOverlay, CdkOverlayOrigin, ConnectedOverlayPositionChange, ConnectionPositionPair } from '@angular/cdk/overlay';
 import { AfterViewInit, ChangeDetectorRef, ElementRef, EventEmitter, OnInit } from '@angular/core';
-import { NzI18nService } from '../i18n/nz-i18n.service';
+import { DateHelperService } from '../i18n/date-helper.service';
 import { CandyDate } from './lib/candy-date';
 export declare class NzPickerComponent implements OnInit, AfterViewInit {
-    private i18n;
+    private dateHelper;
     private changeDetector;
     isRange: boolean;
     open: boolean;
@@ -31,7 +31,7 @@ export declare class NzPickerComponent implements OnInit, AfterViewInit {
     currentPositionX: 'start' | 'end';
     currentPositionY: 'top' | 'bottom';
     readonly realOpenState: boolean;
-    constructor(i18n: NzI18nService, changeDetector: ChangeDetectorRef);
+    constructor(dateHelper: DateHelperService, changeDetector: ChangeDetectorRef);
     ngOnInit(): void;
     ngAfterViewInit(): void;
     showOverlay(): void;

@@ -33,10 +33,6 @@ export declare class CandyDate {
     isBefore(date: CandyDate | Date, grain: CandyDateCompareGrain): boolean;
     isToday(): boolean;
     isInvalid(): boolean;
-    /**
-     * 0-6 (Sunday to Saturday)
-     */
-    firstDayOfWeek(locale?: string): number;
     private toNativeDate;
 }
 export declare type CandyDateCompareGrain = 'year' | 'month' | 'day' | 'hour' | 'minute' | 'second';

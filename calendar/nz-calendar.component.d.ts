@@ -1,8 +1,11 @@
-import { EventEmitter, OnInit, TemplateRef } from '@angular/core';
+import { EventEmitter, OnInit, TemplateRef, ChangeDetectorRef } from '@angular/core';
 import { ControlValueAccessor } from '@angular/forms';
-import { NzI18nService as I18n } from '../i18n/nz-i18n.service';
+import { DateHelperService } from '../i18n/date-helper.service';
+import { NzI18nService } from '../i18n/nz-i18n.service';
 export declare class NzCalendarComponent implements ControlValueAccessor, OnInit {
     private i18n;
+    private cdr;
+    private dateHelper;
     nzMode: 'month' | 'year';
     nzModeChange: EventEmitter<'month' | 'year'>;
     nzValue: Date;
@@ -63,7 +66,7 @@ export declare class NzCalendarComponent implements ControlValueAccessor, OnInit
     private onChangeFn;
     private onTouchFn;
     private readonly calendarStart;
-    constructor(i18n: I18n);
+    constructor(i18n: NzI18nService, cdr: ChangeDetectorRef, dateHelper: DateHelperService);
     ngOnInit(): void;
     onModeChange(mode: 'month' | 'year'): void;
     onDateSelect(date: Date): void;

@@ -1,18 +1,18 @@
 import { EventEmitter, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { DateHelperService } from '../../../i18n/date-helper.service';
 import { NzCalendarI18nInterface } from '../../../i18n/nz-i18n.interface';
-import { NzI18nService } from '../../../i18n/nz-i18n.service';
 import { CandyDate } from '../candy-date';
 export declare class TodayButtonComponent implements OnInit, OnChanges {
-    private i18n;
+    private dateHelper;
     locale: NzCalendarI18nInterface;
     hasTimePicker: boolean;
     disabledDate: (d: Date) => boolean;
     clickToday: EventEmitter<CandyDate>;
     prefixCls: string;
     isDisabled: boolean;
-    readonly title: string;
+    title: string;
     private now;
-    constructor(i18n: NzI18nService);
+    constructor(dateHelper: DateHelperService);
     ngOnInit(): void;
     ngOnChanges(changes: SimpleChanges): void;
     onClickToday(): void;

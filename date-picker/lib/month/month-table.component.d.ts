@@ -1,14 +1,14 @@
 import { EventEmitter, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { NzI18nService } from '../../../i18n/nz-i18n.service';
+import { DateHelperService } from '../../../i18n/date-helper.service';
 import { CandyDate } from '../candy-date';
 export declare class MonthTableComponent implements OnInit, OnChanges {
-    private i18n;
+    private dateHelper;
     value: CandyDate;
     valueChange: EventEmitter<CandyDate>;
     disabledDate: (date: Date) => boolean;
     prefixCls: string;
     panelMonths: PanelMonthData[][];
-    constructor(i18n: NzI18nService);
+    constructor(dateHelper: DateHelperService);
     ngOnInit(): void;
     ngOnChanges(changes: SimpleChanges): void;
     trackPanelMonth(index: number, monthData: PanelMonthData): number;

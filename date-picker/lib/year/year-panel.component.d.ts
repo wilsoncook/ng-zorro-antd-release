@@ -5,7 +5,8 @@ export declare class YearPanelComponent implements OnChanges {
     locale: NzCalendarI18nInterface;
     value: CandyDate;
     valueChange: EventEmitter<CandyDate>;
-    decadePanelShow: EventEmitter<void>;
+    disabledDate: (date: Date) => boolean;
+    readonly decadePanelShow: EventEmitter<void>;
     readonly currentYear: number;
     readonly startYear: number;
     readonly endYear: number;
@@ -22,6 +23,7 @@ export declare class YearPanelComponent implements OnChanges {
     private makePanelYears;
 }
 export interface PanelYearData {
+    disabled: boolean;
     content: string;
     year: number;
     title: string;

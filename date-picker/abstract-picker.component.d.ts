@@ -1,6 +1,7 @@
-import { EventEmitter, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { ChangeDetectorRef, EventEmitter, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { ControlValueAccessor } from '@angular/forms';
 import { Subject } from 'rxjs';
+import { DateHelperService } from '../i18n/date-helper.service';
 import { NzDatePickerI18nInterface } from '../i18n/nz-i18n.interface';
 import { NzI18nService } from '../i18n/nz-i18n.service';
 import { CandyDate } from './lib/candy-date';
@@ -10,6 +11,8 @@ import { NzPickerComponent } from './picker.component';
  */
 export declare abstract class AbstractPickerComponent implements OnInit, OnChanges, OnDestroy, ControlValueAccessor {
     protected i18n: NzI18nService;
+    protected cdr: ChangeDetectorRef;
+    protected dateHelper: DateHelperService;
     nzAllowClear: boolean;
     nzAutoFocus: boolean;
     nzDisabled: boolean;
@@ -31,7 +34,7 @@ export declare abstract class AbstractPickerComponent implements OnInit, OnChang
     initValue(): void;
     protected destroyed$: Subject<void>;
     protected isCustomPlaceHolder: boolean;
-    constructor(i18n: NzI18nService);
+    constructor(i18n: NzI18nService, cdr: ChangeDetectorRef, dateHelper: DateHelperService);
     ngOnInit(): void;
     ngOnChanges(changes: SimpleChanges): void;
     ngOnDestroy(): void;
@@ -54,7 +57,6 @@ export declare abstract class AbstractPickerComponent implements OnInit, OnChang
     setDisabledState(disabled: boolean): void;
     private setLocale;
     private setDefaultPlaceHolder;
-    private formatDate;
     private setValue;
 }
 export declare type CompatibleValue = CandyDate | CandyDate[];

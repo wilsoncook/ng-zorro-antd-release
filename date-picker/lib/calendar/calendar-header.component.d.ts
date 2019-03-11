@@ -1,14 +1,15 @@
 import { EventEmitter, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { DateHelperService } from '../../../i18n/date-helper.service';
 import { NzCalendarI18nInterface } from '../../../i18n/nz-i18n.interface';
-import { NzI18nService } from '../../../i18n/nz-i18n.service';
 import { PanelMode } from '../../standard-types';
 import { CandyDate } from '../candy-date';
 export declare class CalendarHeaderComponent implements OnInit, OnChanges {
-    private i18n;
+    private dateHelper;
     locale: NzCalendarI18nInterface;
     enablePrev: boolean;
     enableNext: boolean;
     disabledMonth: (date: Date) => boolean;
+    disabledYear: (date: Date) => boolean;
     showTimePicker: boolean;
     value: CandyDate;
     valueChange: EventEmitter<CandyDate>;
@@ -20,7 +21,7 @@ export declare class CalendarHeaderComponent implements OnInit, OnChanges {
     prefixCls: string;
     yearMonthDaySelectors: YearMonthDaySelector[];
     private yearToMonth;
-    constructor(i18n: NzI18nService);
+    constructor(dateHelper: DateHelperService);
     ngOnInit(): void;
     ngOnChanges(changes: SimpleChanges): void;
     previousYear(): void;
